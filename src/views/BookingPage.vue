@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useDestinationsStore } from '@/store/modules/destinations'
 import { useBookingStore } from '@/store/modules/booking'
