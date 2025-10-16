@@ -70,8 +70,7 @@ const props = defineProps<Props>()
 const router = useRouter()
 
 const viewDetails = () => {
-  // TODO: Navigate to destination detail page
-  console.log('View details:', props.destination.name)
+  router.push(`/destination/${props.destination.id}`)
 }
 
 const bookNow = () => {

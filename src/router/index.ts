@@ -1,5 +1,6 @@
 import BookingPage from '@/views/BookingPage.vue'
 import HomePage from '@/views/HomePage.vue'
+import DestinationDetailPage from '@/views/DestinationDetailPage.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -11,17 +12,18 @@ const router = createRouter({
       component: HomePage
     },
     {
+      path: '/destination/:id',
+      name: 'destination-detail',
+      component: DestinationDetailPage
+    },
+    {
       path: '/booking/:id?',
       name: 'booking',
       component: BookingPage
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
-    }
+  scrollBehavior() {
+    return { top: 0 }
   }
 })
 
