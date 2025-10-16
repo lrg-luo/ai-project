@@ -16,7 +16,7 @@
         <div class="hidden md:flex items-center space-x-8">
           <router-link to="/" class="text-gray-600 hover:text-primary-500 transition-colors">首页</router-link>
           <a href="#destinations" class="text-gray-600 hover:text-primary-500 transition-colors">目的地</a>
-          <a href="#about" class="text-gray-600 hover:text-primary-500 transition-colors">关于我们</a>
+          <router-link to="/about" class="text-gray-600 hover:text-primary-500 transition-colors">关于我们</router-link>
           <a href="#contact" class="text-gray-600 hover:text-primary-500 transition-colors">联系我们</a>
           <router-link to="/booking" class="btn-primary">立即预订</router-link>
         </div>
@@ -36,7 +36,7 @@
       <div v-if="mobileMenuOpen" class="md:hidden mt-4 pb-4 space-y-4">
         <router-link to="/" class="block text-gray-600 hover:text-primary-500 transition-colors">首页</router-link>
         <a href="#destinations" class="block text-gray-600 hover:text-primary-500 transition-colors">目的地</a>
-        <a href="#about" class="block text-gray-600 hover:text-primary-500 transition-colors">关于我们</a>
+        <router-link to="/about" class="block text-gray-600 hover:text-primary-500 transition-colors">关于我们</router-link>
         <a href="#contact" class="block text-gray-600 hover:text-primary-500 transition-colors">联系我们</a>
         <router-link to="/booking" class="block btn-primary text-center">立即预订</router-link>
       </div>
