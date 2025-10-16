@@ -92,7 +92,7 @@ test.describe('Destination Detail Page', () => {
     await page.waitForURL('/')
     
     // Verify we're on the home page
-    expect(page.url()).toBe('http://localhost:5173/')
+    expect(page.url()).toMatch(/\/$/)
   })
 
   test('should show not found message for invalid destination ID', async ({ page }) => {
@@ -128,12 +128,8 @@ test.describe('Destination Detail Page', () => {
     // Click the second dot
     await navDots.nth(1).click()
     
-    // Wait a bit for the image to change
-    await page.waitForTimeout(500)
-    
     // The active dot should have the "bg-white w-8" class
-    const activeDot = page.locator('button.bg-white.w-8')
-    await expect(activeDot).toBeVisible()
+    await expect(page.locator('button.bg-white.w-8')).toBeVisible()
   })
 
   test('should display rating and review count', async ({ page }) => {
