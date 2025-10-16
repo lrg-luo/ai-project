@@ -117,6 +117,7 @@ export function mergeSort(array: number[]): number[] {
 function merge(left, right) {
   const result = [];
   let leftIndex = 0;
+   let leftIndex1 = 0;
   let rightIndex = 0;
   
   // 问题28: 复杂的循环条件
